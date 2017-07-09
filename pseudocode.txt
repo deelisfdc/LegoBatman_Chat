@@ -1,0 +1,34 @@
+Chat with Lego Batman
+
+Lego Batman has agreed to grace his super fans with a once a week "Get to know me, Lego Batman" chat session. You've been chosen from among his trillion super Lego Batman fans as today's lucky winner to chat with Lego Batman himself!
+
+This super short, bat-tastic session is sponsored by the "Lego Batman Mini Me Super Bat Fans" club of San Francisco, CA.
+
+P.S. This is an unmoderated chat session. Lego Batman's words are his own, and the Lego BatmanLego Batman Mini Super Bat Fans club is not responsible for anything that he says.
+
+Basic Rules:
+1. One chatter at a time. Each chat session will last 90 seconds. 
+2. Lego Batman will call you. When he feels like it. Stand by and be ready.
+3. Lego Batman talks first, and will ask you some questions about yourself. When he prompts you with a question, you must respond immediately without hesitation. 
+4. The second half of the chat, you will be able to ask him some questions of his choice.
+5. Conversation is over when Lego Batman says "Bye!"
+6. There may be instances where the chat is cut short because of the Bat Signal or some other emergency. In such instances, you will see the Batman theme song splayed across the screen.
+
+Minimum Viable Product
+Lego Batman will get to know one super fan by name
+Super fan will get to know more about ...
+
+Nice to haves
+Can I take our class student name base and generate a random name as a winner of super fan chatter of the week?
+
+Pseudocode:
+Open image of Lego Batman superfan chat session
+Start Chat:
+1. Lego Batman asks user: name, favorite color, where do you live? With each response, Lego Batman acknowleges the answer with, "Cool!" and spins off with adding something about his own favorite color or where he lives.
+2. Lego Batman will then go off on a tangent about himself and then says ok, time for the Q&A. Ask me anything you want.
+3. From here: and a short list of 3 topics comes up. User selects a topic, and three questions pop up. User selects a question for Lego Batman to ask.
+4. Lego Batman answers, sometimes ending his response by asking the user another question depending on the selection.
+5. Depending on the question selected, the Bat Signal will go off and lego batman will have to split and the theme song background is splayed (repeats) across the screen and opens a closing image thanking the user for being a super fan.
+
+Nice to have: when time is up, Lego Batman cuts off the chat with something snarky and says Time's Up. Bye! and opens an image thanking the super duper fan.
+
