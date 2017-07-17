@@ -8,7 +8,7 @@
 
 #introduces lego Batman, Askes for user name and information
 
-#My code is not working :(
+#My code is not working :( Help!
 
 
 my_guest_list = []
@@ -80,12 +80,13 @@ def start_background_check():
     if guest_name == "JOKER":
         
         print "Ah ha! My arch nemesis and Frenemy. Alright, I'll give you a minute."
-    
-    else:
-        print "Hmmm. I once caught a villian with that name. Caught 'em on the FIRST TRY!"
 
+        guest_lives_here()
     
-    guest_lives_here()
+    elif guest_name != "JOKER":
+        print guest_name, "Hmmm. I once caught a villian with that name. Caught 'em on the FIRST TRY!"
+
+        guest_lives_here()
 
 
 def guest_lives_here():
@@ -111,7 +112,6 @@ def guest_favorite_superhero():
         print "What? Oh hey, lookit that Bat Signal! Gotta go!"
 
         print theme_song()
-
 
     elif favorite_superhero == "Wonderwoman":
 
