@@ -42,9 +42,18 @@ my_guest_list = []
 
 #guest_name = {'enemy': JOKER, CATWOMAN, RIDDLER, 'ally': DICK GRAYSON, RICHARD GRAYSON, BARBARA GORDON, DIANA PRINCE}
 
-#superhero = [Batman, Batgirl, Bat Girl, Wonder Woman, Superman, Robin]
+favorite_hero = {
+    "BATMAN": "Wow. Yeah! All right!\nNow it's YOUR turn for Q&A!",
+    "YOU": "Wow. Yeah! All right!\nNow it's YOUR turn for Q&A!",
+    "WONDER WOMAN": "Yeah! Mine too! Ahem, I mean: On to Q&A!",
+    "WONDERWOMAN": "Yeah! Mine too! Ahem, I mean: On to Q&A!",
+    "SUPERMAN":"What?! Oh hey, lookit that - The Bat Signal!\nInterview's over!\nGotta go!",
+    "ROBIN": "\nWhat?! ...Ok. Yeah!\nMe and Robin - we make a good team!\nI'm so proud of him!\nNow it's YOUR turn for Q&A!"}
 
-
+#superhero_keys = {"BATMAN": "Batman", "YOU": "Batman"}
+#favorite_hero=raw_input('whosyourfavorite hero').upper()
+#hero_key = superhero_keys[favorite_hero]
+#print superhero[hero_key]
 
 # def start_background_check():
         
@@ -83,11 +92,14 @@ def start_background_check():
 
     if guest_name == "JOKER":
         
-        print "Ah ha! My arch nemesis and Frenemy. What evil trick do you have up your sleeve now?"
+        print """
+        \n\tAh ha! My arch nemesis and Frenemy.
+        \n\tWhat evil trick do you have up your sleeve now?
+        """
     
     elif guest_name != "JOKER":
 
-        print "\n{}. Hmmm. I once battled a villian with that *same* name.\nCaught 'em on the FIRST TRY!\nOK Next question while Computer traces this call:\n".format(guest_name.upper())
+        print "\n\t{}... Hmmm. I once battled a villian with that *same* name. \n\tCaught 'em on the FIRST TRY! \n\tOK Next question while Computer traces this call...\n\t".format(guest_name.upper())
 
         my_guest_list.append
         
@@ -106,10 +118,10 @@ def guest_lives_here():
     guest_hometown = guest_hometown.title()
     
     print """
-    \nHuh. What a coincidence. I have (ahem) -- 
-    \nI mean, I HEARD that Wayne Enterprises owns most of the land out there...
-    \n...Interesting.
-    """
+    \nHuh. {}. What a coincidence. I have (ahem)...
+    \nI MEAN, I HEARD that Uhhh.. WAYNE ENTERPRISES owns most of the land out there...
+    \n...Interesting. OK next question!
+    """.format(guest_hometown)
 
     guest_favorite_superhero()
 
@@ -125,46 +137,78 @@ def guest_favorite_superhero():
 
     if favorite_superhero == "SUPERMAN":
 
-        print "What? Oh hey, lookit that Bat Signal!\nInterview's over!\nGotta go!"
+        print favorite_hero["SUPERMAN"]
+        #"What? Oh hey, lookit that Bat Signal!\nInterview's over!\nGotta go!"
 
         print theme_song()
 
     elif favorite_superhero == "WONDER WOMAN" or "WONDERWOMAN":
+        
+        print favorite_hero["WONDER WOMAN"]
 
-        print "Yeah! Mine too! Ahem, I mean: On to Q&A!"
+        #print "Yeah! Mine too! Ahem, I mean: On to Q&A!"
+        
+        ask_batman()
 
     elif favorite_superhero == "BATMAN" or "YOU":
 
-        print "Wow. Yeah! All right!\nNow it's YOUR turn for Q&A!"
+        print favorite_hero["BATMAN"]
+        #print "Wow. Yeah! All right!\nNow it's YOUR turn for Q&A!"
+
+        ask_batman()
 
     elif favorite_superhero == "ROBIN" or "BOY WONDER":
 
-        print "\nWhat?! ...Ok. Yeah!\nMe and Robin - we make a good team!\nI'm so proud of him!\nNow it's YOUR turn for Q&A!"
+        print favorite_hero["ROBIN"]
+
+        #print "\nWhat?! ...Ok. Yeah!\nMe and Robin - we make a good team!\nI'm so proud of him!\nNow it's YOUR turn for Q&A!"
+
+        ask_batman()
 
     else:
         print "Wait, now.\nWho??\nThose are NOT even superheroes!\nName someone else!"
 #       Ask favorite super hero question again - random question)
             
-        guest_favorite-superhero()
+        guest_favorite_superhero()
 
     return favorite_superhero
 
 
+def ask_batman():
+
+    print """"
+    /nOK. Now your turn.
+    \nWe have one minute til my Lobster Thermidor is ready to eat!
+    \nWhat do you want to know about me:
+    \n\tA - My favorite Bat weapon
+    \n\tB - My greatest Feat
+    \n\tC - Random bit of Bat Wisdom
+    """
+    
+    batman_question = raw_input("Choose A, B or C: ")
+    batman_question = batman_question.upper
+
+    pass
+
+
 def theme_song():
 
-    print "\n\tNa-nuh Na-nuh!" * 4 "\t***Batman!***\t*** Ka Pow! ***"
+    """print theme song string. Exit."""
+
+    print "\n\tNa-nuh Na-nuh!" * 4 + "\t***Batman!***\t*** Ka Pow! ***"
 
 
 def catch_suspicious_person():
+    """print warning and theme song. Exit."""
 
-    print "\n\tHmmm. Not answering is super suspicious.\n\tWe'd better bring you in for questioning.\n\tComputer has traced your location.\n\tBetter run! Gotham Police will be there is 30 seconds!"\n\t"
-        
+    print "\n\tHmmm. Not answering is super suspicious.\n\tI'm going to bring you in for questioning.\n\tComputer has a lock on your location.\n\tBetter run! Gotham Police will be there is 30 seconds!\n\t"
+
     print theme_song()
 
 
-def Lego_Batman_chat_start():
+def lego_batman_chat_start():
 
-#1. Lego Batman asks user: name, favorite color, where do you live?
+#1. Lego batman asks user: name, favorite color, where do you live?
 
     """Get Start Chat Permission"""
 
@@ -179,20 +223,20 @@ def Lego_Batman_chat_start():
     \n\tReady?
     \n\tType "Y" to start.
     \tIf you wanna skip this part and stay anonymous, type "N"
-    \tIf you've got something to hide, start running now!!>>>
+    \tIf you've got something to hide, start running now!!
     """
 
-    start_choice = raw_input("")
+    start_choice = raw_input("\t>>>")
 
     start_choice = start_choice.upper()
 
-    if start_choice == "Y":
+    if start_choice >= "Y":
 
         print "All right! Let's get started."
 
         start_background_check()
 
-    elif start_choice == "N":
+    elif start_choice >= "N":
 
         print """
         \nHmmm...Sounds sneaky.
@@ -217,5 +261,6 @@ def Lego_Batman_chat_start():
 
         print theme_song()
 
+    print "Thanks for playing!"
 #-----------------------------------------------
-Lego_Batman_chat_start()
+lego_batman_chat_start()
